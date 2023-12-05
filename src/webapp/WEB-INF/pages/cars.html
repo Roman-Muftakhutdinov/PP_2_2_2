@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>cars</title>
+</head>
+<body>
+<p>cars</p>
+<div>
+    <table border="1">
+        <tr>
+            <th>brand</th>
+            <th>model</th>
+            <th>year</th>
+        </tr>
+        <tr th:each = "car : ${newList}">
+            <td th:utext= "${car.brand}"></td>
+            <td th:utext= "${car.model}"></td>
+            <td th:utext= "${car.year}"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
